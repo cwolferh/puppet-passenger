@@ -14,7 +14,7 @@ class passenger::install::redhat {
 
   package{'passenger':
     ensure  => installed,
-    name    => 'mod_passenger',
+    name    => 'ruby193-mod_passenger',
     require => Class['apache::install'],
     before  => Class['apache::service'],
   }
