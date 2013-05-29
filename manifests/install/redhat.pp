@@ -19,4 +19,16 @@ class passenger::install::redhat {
     before  => Class['apache::service'],
   }
 
+  package { 'ruby193-rubygem-passenger-native':
+    ensure  => installed,
+    require => Class['apache::install'],
+    before  => Class['apache::service'],
+  }
+
+  package { 'ruby193-rubygem-passenger-native-libs':
+    ensure  => installed,
+    require => Class['apache::install'],
+    before  => Class['apache::service'],
+  }
+
 }
